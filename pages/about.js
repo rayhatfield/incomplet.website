@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutPage() {
   return (
     <div>
@@ -24,6 +26,12 @@ export default function AboutPage() {
           and is always seeking to learn more about styles, trends, and
           designers from across the globe.
         </p>
+        <Image
+          src="/images/mandy.jpg"
+          width={600}
+          height={400}
+          objectFit="cover"
+        />
       </article>
       <article>
         <h2>our team</h2>
