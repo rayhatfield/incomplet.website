@@ -1,18 +1,23 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { API_BASE_URL } from "../../lib/constants";
 import { getEpisodes } from "../../lib/episodes";
 
 import styles from "./episodes.module.css";
 
-function Episode({ episode: { title, image_url }, ...other }) {
+function Episode({ episode: { title, image_url, slug }, ...other }) {
   return (
-    <article {...other}>
-      <div className={styles.thumbnail}>
-        <Image src={image_url} width={180} height={180} objectFit="cover" />
-      </div>
-      <h1>{title}</h1>
-    </article>
+    <Link href={`/episodes/${slug}`}>
+      <a>
+        <article {...other}>
+          <div className={styles.thumbnail}>
+            <Image src={image_url} width={180} height={180} objectFit="cover" />
+          </div>
+          <h1>{title}</h1>
+        </article>
+      </a>
+    </Link>
   );
 }
 
