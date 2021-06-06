@@ -1,12 +1,15 @@
 import Image from "next/image";
 
-import { getEpisodes } from "../../lib/episodes";
+import { getEpisodes, getEpisode } from "../../lib/episodes";
 
-export default function Episode({ episode: { title, image_url } }) {
+export default function Episode({
+  episode: { title, image_url, long_description },
+}) {
   return (
     <article>
       <h1>{title}</h1>
       <Image src={image_url} width={180} height={180} />
+      <div dangerouslySetInnerHTML={{ __html: long_description }} />
     </article>
   );
 }
@@ -26,10 +29,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const episodes = await getEpisodes();
-  return {
-    props: {
-      episode: episodes.find((e) => e.slug === slug),
-    },
-  };
+  const episode = await getEpisode(slug);
+  return episode
+    ? {
+        props: {
+          episode,
+        },
+      }
+    : {
+        notFound: true,
+      };
 }

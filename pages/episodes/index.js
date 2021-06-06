@@ -6,10 +6,10 @@ import { getEpisodes } from "../../lib/episodes";
 
 import styles from "./episodes.module.css";
 
-function Episode({ episode: { title, image_url, slug }, ...other }) {
+function Episode({ episode: { title, image_url, slug }, className, ...other }) {
   return (
     <Link href={`/episodes/${slug}`}>
-      <a>
+      <a className={className}>
         <article {...other}>
           <div className={styles.thumbnail}>
             <Image src={image_url} width={180} height={180} objectFit="cover" />
