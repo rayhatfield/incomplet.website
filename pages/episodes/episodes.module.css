@@ -15,6 +15,7 @@
 .episode {
   position: relative;
   color: white;
+  width: 100%;
 }
 
 .episode h1 {

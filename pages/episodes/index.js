@@ -9,7 +9,7 @@ function Episode({ episode: { title, image_url }, ...other }) {
   return (
     <article {...other}>
       <div className={styles.thumbnail}>
-        <img src={image_url} width={180} height={180} objectFit="cover" />
+        <Image src={image_url} width={180} height={180} objectFit="cover" />
       </div>
       <h1>{title}</h1>
     </article>
