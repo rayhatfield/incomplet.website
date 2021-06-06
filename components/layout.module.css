@@ -1,0 +1,29 @@
+.root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: var(--color-nav-bg);
+  color: var(--color-nav-fg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  flex: 0 0 0px;
+}
+
+.main {
+  padding: 1rem 2rem;
+  flex: 1 1 auto;
+}
+
+.footer {
+  padding: 1rem 2rem;
+  flex: 0 0 0px;
+}
+
+.nav > * {
+  margin-left: 1em;
+}

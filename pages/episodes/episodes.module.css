@@ -1,0 +1,32 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 180px));
+  grid-auto-rows: 180px;
+  gap: 1rem;
+}
+
+.list > li {
+  display: flex; /* fill the vertical space */
+}
+
+.episode {
+  position: relative;
+  color: white;
+}
+
+.episode h1 {
+  position: relative; /* on top of the image */
+}
+
+.thumbnail {
+  background: var(--color-nav-bg);
+  filter: contrast(0.25) sepia(1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

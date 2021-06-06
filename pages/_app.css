@@ -1,0 +1,24 @@
+:root {
+  --body-font-family: helvetica, sans-serif;
+  --color-nav-bg: rgb(164, 195, 200);
+  --color-nav-fg: hsl(0, 0%, 100%);
+  --color-page-bg: rgb(242, 253, 224);
+  --color-page-fg: var(--color-nav-bg);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font-family);
+  background: var(--color-page-bg);
+  color: var(--color-page-fg);
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  color: currentColor;
+}
