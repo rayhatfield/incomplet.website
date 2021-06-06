@@ -1,12 +1,15 @@
 import Image from "next/image";
 
+import { API_BASE_URL } from "../../lib/constants";
+import { getEpisodes } from "../../lib/episodes";
+
 import styles from "./episodes.module.css";
 
-function Episode({ episode: { title, image }, ...other }) {
+function Episode({ episode: { title, image_url }, ...other }) {
   return (
     <article {...other}>
       <div className={styles.thumbnail}>
-        <Image src={image} width={180} height={180} objectFit="cover" />
+        <img src={image_url} width={180} height={180} objectFit="cover" />
       </div>
       <h1>{title}</h1>
     </article>
@@ -26,12 +29,11 @@ export default function Episodes({ episodes }) {
 }
 
 export async function getServerSideProps(context) {
+  const episodes = await getEpisodes();
+
   return {
     props: {
-      episodes: Array.from({ length: 12 }, (_, i) => ({
-        title: `S1E${i + 1}: Episode ${i + 1}`,
-        image: "/images/mandy.jpg"
-      }))
-    }
+      episodes,
+    },
   };
 }
