@@ -17,12 +17,6 @@ export function Layout({ children }) {
           <Link href="/about">
             <a>about</a>
           </Link>
-          <Link href="/episodes">
-            <a>episodes</a>
-          </Link>
-          {/* <Link href="/support">
-            <a>support</a>
-          </Link> */}
         </nav>
       </header>
       <main className={styles.main}>{children}</main>
