@@ -14,18 +14,15 @@ export function Layout({ children }) {
           </Link>
         </h1>
         <nav className={styles.nav}>
-          <Link href="/">
-            <a>home</a>
-          </Link>
           <Link href="/about">
             <a>about</a>
           </Link>
           <Link href="/episodes">
             <a>episodes</a>
           </Link>
-          <Link href="/support">
+          {/* <Link href="/support">
             <a>support</a>
-          </Link>
+          </Link> */}
         </nav>
       </header>
       <main className={styles.main}>{children}</main>

@@ -1,3 +1,5 @@
+import { Redirect } from "../components/redirect";
+
 export default function IndexPage() {
-  return <div>home</div>;
+  return <Redirect to="/episodes" />;
 }
