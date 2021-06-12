@@ -22,7 +22,7 @@ const Ep = ({
   <article>
     <h1>{title}</h1>
     <Image src={image_url} width={180} height={180} />
-    <audio controls src={audio_file?.url} />
+    {audio_file?.url && <audio controls src={audio_file?.url} />}
     <Player episodeId={id} />
     <div dangerouslySetInnerHTML={{ __html: long_description }} />
   </article>
