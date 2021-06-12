@@ -18,18 +18,21 @@ export async function getStaticPaths() {
   const episodes = await getEpisodes();
   const paths = episodes.map(({ slug }) => ({
     params: {
-      slug,
+      slug: [slug],
     },
   }));
 
+  const root = { params: { slug: false } };
+
   return {
-    paths,
+    paths: [root, ...paths],
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const episode = await getEpisode(slug);
+  const episodes = await getEpisodes();
+  const episode = slug?.[0] ? await getEpisode(slug[0]) : null;
   return episode
     ? {
         props: {
