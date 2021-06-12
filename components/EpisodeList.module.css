@@ -30,8 +30,10 @@
   left: 0;
   bottom: 0;
   right: 0;
+  transition: all .25s;
 }
 
+.thumbnail:hover,
 .active .thumbnail {
   filter: none;
   box-shadow: 0 0 8px var(--color-nav-bg);
