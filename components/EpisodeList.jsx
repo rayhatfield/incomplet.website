@@ -1,12 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { API_BASE_URL } from "../../lib/constants";
-import { getEpisodes } from "../../lib/episodes";
+import { API_BASE_URL } from "../lib/constants";
+import { getEpisodes } from "../lib/episodes";
 
-import styles from "./episodes.module.css";
+import styles from "./EpisodeList.module.css";
 
-function Episode({ episode: { title, image_url, slug }, className, ...other }) {
+function Episode({
+  episode: { title, image_url, slug } = {},
+  className,
+  ...other
+}) {
   return (
     <Link href={`/episodes/${slug}`}>
       <a className={className}>
@@ -31,14 +35,4 @@ export default function Episodes({ episodes }) {
       ))}
     </ol>
   );
-}
-
-export async function getServerSideProps(context) {
-  const episodes = await getEpisodes();
-
-  return {
-    props: {
-      episodes,
-    },
-  };
 }
