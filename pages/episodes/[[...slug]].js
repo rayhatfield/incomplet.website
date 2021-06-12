@@ -16,10 +16,13 @@ const Player = ({ episodeId }) => (
   ></iframe>
 );
 
-const Ep = ({ episode: { id, title, image_url, long_description } }) => (
+const Ep = ({
+  episode: { id, title, image_url, long_description, audio_file },
+}) => (
   <article>
     <h1>{title}</h1>
     <Image src={image_url} width={180} height={180} />
+    <audio controls src={audio_file?.url} />
     <Player episodeId={id} />
     <div dangerouslySetInnerHTML={{ __html: long_description }} />
   </article>
