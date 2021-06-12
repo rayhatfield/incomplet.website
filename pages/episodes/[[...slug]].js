@@ -5,10 +5,22 @@ import EpisodeList from "../../components/EpisodeList";
 
 import style from "./episodes.module.css";
 
-const Ep = ({ episode: { title, image_url, long_description } }) => (
+const Player = ({ episodeId }) => (
+  <iframe
+    height="200px"
+    width="100%"
+    frameBorder="no"
+    scrolling="no"
+    seamless
+    src={`https://player.simplecast.com/${episodeId}?dark=false`}
+  ></iframe>
+);
+
+const Ep = ({ episode: { id, title, image_url, long_description } }) => (
   <article>
     <h1>{title}</h1>
     <Image src={image_url} width={180} height={180} />
+    <Player episodeId={id} />
     <div dangerouslySetInnerHTML={{ __html: long_description }} />
   </article>
 );
