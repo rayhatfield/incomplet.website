@@ -16,7 +16,7 @@ const Ep = ({ episode: { title, image_url, long_description } }) => (
 export default function Episode({ episodes, episode }) {
   return (
     <section className={style.container}>
-      <EpisodeList episodes={episodes} />
+      <EpisodeList episodes={episodes} active={episode} />
       {episode && <Ep episode={episode} />}
     </section>
   );
