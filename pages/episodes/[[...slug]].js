@@ -3,6 +3,8 @@ import Image from "next/image";
 import { getEpisodes, getEpisode } from "../../lib/episodes";
 import EpisodeList from "../../components/EpisodeList";
 
+import style from "./episodes.module.css";
+
 const Ep = ({ episode: { title, image_url, long_description } }) => (
   <article>
     <h1>{title}</h1>
@@ -13,7 +15,7 @@ const Ep = ({ episode: { title, image_url, long_description } }) => (
 
 export default function Episode({ episodes, episode }) {
   return (
-    <section>
+    <section className={style.container}>
       <EpisodeList episodes={episodes} />
       {episode && <Ep episode={episode} />}
     </section>
