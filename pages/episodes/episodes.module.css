@@ -1,5 +1,10 @@
 .container {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    grid-template-columns: max-content 1fr;
+}
+
+.main {
+    max-width: 60ch;
+    margin: 0 auto;
 }

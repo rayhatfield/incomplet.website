@@ -2,39 +2,29 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 180px));
-  grid-auto-rows: 180px;
-  gap: 1rem;
+  font-size: 0.775rem;
+  letter-spacing: 0.1em;
+  position: sticky;
+  top: 0;
 }
 
 .list > li {
-  display: flex; /* fill the vertical space */
+  margin-bottom: 0.25rem;
 }
 
-.episode {
-  position: relative;
-  color: white;
-  width: 100%;
+.list a {
+  text-decoration: none;
+  padding: 0.25em .5em;
+  display: block;
+  border-radius: 2px;
+  transition: 1s all;
 }
 
-.episode h1 {
-  position: relative; /* on top of the image */
+.active, .list a:hover {
+  background-color: var(--color-accent);
+  transition: .25s all;
 }
 
-.thumbnail {
-  background: var(--color-nav-bg);
-  filter: contrast(0.25) sepia(1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  transition: all .25s;
-}
-
-.thumbnail:hover,
-.active .thumbnail {
-  filter: none;
-  box-shadow: 0 0 8px var(--color-nav-bg);
+.list a:not(.active) {
+  opacity: 0.5;
 }

@@ -19,10 +19,7 @@ const Player = ({ episodeId }) => (
 const Ep = ({
   episode: { id, title, image_url, long_description, audio_file },
 }) => (
-  <article>
-    <h1>{title}</h1>
-    <Image src={image_url} width={180} height={180} />
-    {audio_file?.url && <audio controls src={audio_file?.url} />}
+  <article className={style.main}>
     <Player episodeId={id} />
     <div dangerouslySetInnerHTML={{ __html: long_description }} />
   </article>

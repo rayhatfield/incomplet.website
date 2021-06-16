@@ -15,12 +15,7 @@ function Episode({
   return (
     <Link href={`/episodes/${slug}`}>
       <a className={clsx(styles.episode, { [styles.active]: active })}>
-        <article {...other}>
-          <div className={styles.thumbnail}>
-            <Image src={image_url} width={180} height={180} objectFit="cover" />
-          </div>
-          <h1>{title}</h1>
-        </article>
+        {title}
       </a>
     </Link>
   );

@@ -8,11 +8,14 @@
   --header-font-weight: 800;
   --header-font-size: 1rem;
 
-  /* --color-nav-bg: rgb(164, 195, 200);
-  --color-nav-fg: hsl(0, 0%, 100%);
-  --color-page-bg: rgb(242, 253, 224);
-  --color-page-fg: var(--color-nav-bg); */
+  --color-primary-fg: black;
+  --color-primary-bg: white;
+  --color-accent: #a5d0e4;
 
+  --color-nav-bg: var(--color-primary-fg);
+  --color-nav-fg: var(--color-primary-bg);
+  --color-page-bg: var(--color-primary-bg);
+  --color-page-fg: var(--color-primary-fg);
 }
 
 html,
