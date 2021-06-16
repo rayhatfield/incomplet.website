@@ -1,12 +1,8 @@
 .container {
     display: grid;
     gap: 2rem;
-    grid-template-columns: max-content 1fr;
-}
-
-.main {
-    max-width: 60ch;
-    margin: 0 auto;
+    grid-template-columns: max-content minmax(200px, 60ch);
+    justify-content: center;
 }
 
 .main iframe {
