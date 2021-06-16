@@ -1,9 +1,18 @@
 :root {
-  --body-font-family: helvetica, sans-serif;
-  --color-nav-bg: rgb(164, 195, 200);
+  --body-font-family: "Archer A", "Archer B", helvetica, sans-serif;
+  --body-font-weight: 500;
+  --body-font-size: 24px;
+  --body-line-height: 1.6;
+
+  --header-font-family: "Verlag A", "Verlag B";
+  --header-font-weight: 800;
+  --header-font-size: 1rem;
+
+  /* --color-nav-bg: rgb(164, 195, 200);
   --color-nav-fg: hsl(0, 0%, 100%);
   --color-page-bg: rgb(242, 253, 224);
-  --color-page-fg: var(--color-nav-bg);
+  --color-page-fg: var(--color-nav-bg); */
+
 }
 
 html,
@@ -11,12 +20,20 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
   background: var(--color-page-bg);
   color: var(--color-page-fg);
 }
 
-h1 {
+h1,h2,h3,h4,h5,h6,strong {
+  text-transform: uppercase;
+  font-family: var(--header-font-family);
+  font-weight: var(--header-font-weight);
+  font-size: var(--header-font-size);
   margin: 0;
+  letter-spacing: 0.1em;
 }
 
 a {

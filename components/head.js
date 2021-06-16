@@ -11,6 +11,11 @@ export function Head() {
         crossOrigin="anonymous"
         referrerPolicy="no-referrer"
       />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cloud.typography.com/704534/6723032/css/fonts.css"
+      />
     </H>
   );
 }
