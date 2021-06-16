@@ -21,6 +21,7 @@ const Ep = ({
 }) => (
   <article className={style.main}>
     <Player episodeId={id} />
+    <h1>{title}</h1>
     <div dangerouslySetInnerHTML={{ __html: long_description }} />
   </article>
 );
