@@ -18,6 +18,12 @@
   --color-page-fg: var(--color-primary-fg);
 }
 
+@media (max-width: 768px) {
+  :root {
+      --body-font-size: 16px;
+  }
+}
+
 html,
 body {
   margin: 0;
