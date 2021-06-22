@@ -8,28 +8,47 @@ export default function AboutPage() {
       <article>
         <h2>about the show</h2>
         <p>
-          This is Incomplēt Design History, a podcast that explores topics in
-          graphic design history that are often overlooked or ignored, with the
-          goal to expand knowledge, understanding, and interpretations of design
-          history as well as to include all sides of the story
+          History is, by nature, never “complete” and almost always a little
+          messy. New information pops up every day that changes or challenges
+          our understanding and interpretations of it. We want to expand our
+          knowledge of graphic design history and really dig into the stories.
+          We believe that differences are strengths, so we want to be inclusive,
+          not only of people but of ideas and technologies that make the history
+          of graphic design so rich. Our mission with the Incomplete Design
+          History podcast is to explore the overlooked, underrepresented, or
+          ignored areas of graphic design history, tell those stories, and make
+          graphic design history a little less Incomplete.
         </p>
       </article>
       <article>
         <h2>your host</h2>
         <p>
-          Amanda (Mandy) Horton holds a BFA in graphic design from Oklahoma
-          State University and MFA in Design from the University of Central
-          Oklahoma. While she also teaches classes in design technology and
-          studio, her specialty lies in design history. Accordingly, she is the
-          director of design history minor at UCO. She has been featured on CAA
-          podcast where she discussed teaching design history and been published
-          in the International Journal of Visual Design. However, Mandy
-          recognizes that the world of graphic design history changes each day,
-          and is always seeking to learn more about styles, trends, and
-          designers from across the globe.
+          Mandy became interested in graphic design history while studying
+          graphic design at Oklahoma State University. After graduation she took
+          a year off to work at a dude ranch in Colorado and contemplate life.
+          She decided she wasn’t done with school just yet and immersed herself
+          in graphic design history. MFA in hand, she is now a professor of
+          graphic design at the University of Central Oklahoma where she teaches
+          design theory, criticism, and history of graphic design and is the
+          director of the design history minor.
+        </p>
+        <p>
+          The idea for the Incomplete Design History podcast came from Mandy’s
+          passion for research into the stories and histories outside of the
+          ‘official’ design canon.
+        </p>
+        <p>
+          Mandy is a feminist who lives with her partner Ray, their deaf dog
+          Solo, who is a certified therapy dog, two cats Rocky and Gypsy, who
+          are certified for nothing, and wishes she lived closer to her two
+          horses Rambo and Bogie. In her free time she likes to ride horses, go
+          to the dog park, work in the garden and read all the books. For stress
+          relief she likes to practice hand lettering and calligraphy techniques
+          and has an obsession with buying pens.
         </p>
         <Image
           src="/images/mandy.jpg"
+          alt="Photo of Mandy"
           width={600}
           height={400}
           objectFit="cover"
