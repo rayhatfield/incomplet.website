@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "post-update": "yarn upgrade --latest"
+    "post-update": "yarn upgrade --latest",
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "axios": "^0.21.1",
