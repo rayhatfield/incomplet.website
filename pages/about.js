@@ -49,8 +49,8 @@ export default function AboutPage() {
         <Image
           src="/images/mandy.jpg"
           alt="Photo of Mandy"
-          width={600}
-          height={400}
+          width={800}
+          height={872}
           objectFit="cover"
         />
       </article>
