@@ -120,6 +120,7 @@ __metadata:
   dependencies:
     axios: ^0.21.1
     clsx: ^1.1.1
+    date-format: ^3.0.0
     eslint: ^7.28.0
     eslint-config-next: ^11.0.0
     next: latest
@@ -1170,6 +1171,13 @@ __metadata:
   version: 3.0.1
   resolution: "data-uri-to-buffer@npm:3.0.1"
   checksum: 9f28217ba76eaca400a75f4b1a1d0f55058082c8152a3d88ad5feeec5e54b8c7b6d8a7bb210206bfa552a927c1b942b6102ddbb2feaa557321ea94762c4f14e2
+  languageName: node
+  linkType: hard
+
+"date-format@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "date-format@npm:3.0.0"
+  checksum: 42fc691af56bd78c1881e3f2d1f64d02f9b821fe3d927e4d559a75c8b67f22492e471372e2b37514451bbf37b705f0b130ef5aa07cb1e9d2ebaf11ccc0fa295f
   languageName: node
   linkType: hard
 

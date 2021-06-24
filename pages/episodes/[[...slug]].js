@@ -1,4 +1,5 @@
 import Image from "next/image";
+import dateFormat from "date-format";
 
 import { getEpisodes, getEpisode } from "../../lib/episodes";
 import EpisodeList from "../../components/EpisodeList";
@@ -16,15 +17,49 @@ const Player = ({ episodeId }) => (
   ></iframe>
 );
 
-const Ep = ({
-  episode: { id, title, image_url, long_description, audio_file },
-}) => (
-  <article className={style.main}>
-    <Player episodeId={id} />
-    <h1>{title}</h1>
-    <div dangerouslySetInnerHTML={{ __html: long_description }} />
-  </article>
-);
+const Scheduled = ({ episode: { scheduled_for: date } }) =>
+  !date ? null : (
+    <span>Episode Coming {dateFormat("yyyy-MM-dd", new Date(date))}</span>
+  );
+
+const Published = ({ episode: { id } }) => <Player episodeId={id} />;
+
+const EpisodeTokens = ({ episode }) => {
+  return (
+    <ul className={style.tokens}>
+      {episode?.status === "scheduled" && (
+        <li>
+          <Scheduled episode={episode} />
+        </li>
+      )}
+      {episode?.status === "draft" && (
+        <li>
+          <span>Draft</span>
+        </li>
+      )}
+    </ul>
+  );
+};
+
+const Header = ({ episode, episode: { title, status } }) => {
+  const published = status === "published" || status === "draft"; // showing drafts temporarily
+  return (
+    <header>
+      {published && <Published episode={episode} />}
+      <h1>{title}</h1>
+      <EpisodeTokens episode={episode} />
+    </header>
+  );
+};
+
+const Ep = ({ episode, episode: { image_url, long_description } }) => {
+  return (
+    <article className={style.main}>
+      <Header episode={episode} />
+      <div dangerouslySetInnerHTML={{ __html: long_description }} />
+    </article>
+  );
+};
 
 export default function Episode({ episodes, episode }) {
   return (

@@ -20,6 +20,27 @@
     vertical-align: bottom;
 }
 
+.tokens {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    gap: 0.5em;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    opacity: 0.3;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+}
+
+.tokens > * {
+    background: black;
+    display: inline-block;
+    padding: 0 .5em;
+    border-radius: 4px;
+}
+
 @media (max-width: 768px) {
     .container {
         display: block;

@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "clsx": "^1.1.1",
+    "date-format": "^3.0.0",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
