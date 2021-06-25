@@ -2,3 +2,11 @@
     max-width: 60ch;
     margin: 0 auto;
 }
+
+.image {
+    float: left;
+    margin: 1.25em 1em 0 0;
+    line-height: 0;
+    border-radius: 4px;
+    overflow: hidden;
+}

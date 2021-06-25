@@ -22,6 +22,15 @@ export default function AboutPage() {
       </article>
       <article>
         <h2>your host</h2>
+        <div className={style.image}>
+          <Image
+            src="/images/mandy.jpg"
+            alt="Photo of Mandy"
+            width={336}
+            height={336}
+            objectFit="cover"
+          />
+        </div>
         <p>
           Mandy became interested in graphic design history while studying
           graphic design at Oklahoma State University. After graduation she took
@@ -46,13 +55,6 @@ export default function AboutPage() {
           relief she likes to practice hand lettering and calligraphy techniques
           and has an obsession with buying pens.
         </p>
-        <Image
-          src="/images/mandy.jpg"
-          alt="Photo of Mandy"
-          width={800}
-          height={872}
-          objectFit="cover"
-        />
       </article>
       <article>
         <h2>our team</h2>
