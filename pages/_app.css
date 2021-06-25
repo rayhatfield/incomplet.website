@@ -16,6 +16,9 @@
   --color-nav-fg: var(--color-primary-bg);
   --color-page-bg: var(--color-primary-bg);
   --color-page-fg: var(--color-primary-fg);
+  
+  --color-token-bg: rgba(0,0,0,0.3);
+  --color-token-fg: var(--color-primary-bg);
 }
 
 @media (max-width: 768px) {
