@@ -46,6 +46,8 @@
     position: absolute;
     width: 100%;
     background-color: var(--color-page-bg, white);
+    max-height: 65vh;
+    overflow: auto;
   }
 
   .container ~ * {
