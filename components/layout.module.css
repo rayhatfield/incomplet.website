@@ -18,6 +18,19 @@
   text-decoration: none;
 }
 
+.logo-main {
+  width: 200px;
+  display: block;
+  margin-left: -5px;
+}
+
+.tagline {
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: .625rem;
+  margin: 0;
+}
+
 .main {
   padding: 1rem 2rem;
   flex: 1 1 auto;
