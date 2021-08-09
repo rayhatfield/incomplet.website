@@ -10,7 +10,7 @@ export default function AboutPage({ episodes }) {
   return (
     <div className={epiodesStyle.container}>
       <EpisodeList episodes={episodes} />
-      <div className={style.main}>
+      <div>
         <article>
           <h2>about the show</h2>
           <p>
