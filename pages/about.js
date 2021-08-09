@@ -50,8 +50,9 @@ export default function AboutPage({ episodes }) {
           </p>
           <p>
             The idea for the Incomplete Design History podcast came from Mandy’s
-            passion for research into the stories and histories outside of the
-            ‘official’ design canon.
+            interest in researching the stories and histories outside of the
+            ‘official’ design canon for class, and her desire to share these
+            stories beyond the classroom.
           </p>
           <p>
             Mandy is a feminist who lives with her partner Ray, their deaf dog
