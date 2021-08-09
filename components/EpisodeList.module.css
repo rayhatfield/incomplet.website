@@ -41,6 +41,13 @@
   opacity: 0.5;
 }
 
+.tag {
+  display: block;
+  font-size: .5rem;
+  text-transform: uppercase;
+  margin-top: -.5em;
+}
+
 @media (max-width: 768px) {
   .container {
     position: absolute;

@@ -11,7 +11,7 @@ import styles from "./EpisodeList.module.css";
 const MENU = "menu";
 
 function Episode({
-  episode: { title, image_url, slug } = {},
+  episode: { title, image_url, slug, status } = {},
   active,
   ...other
 }) {
@@ -21,7 +21,10 @@ function Episode({
   return (
     <Cmp>
       <a className={clsx(styles.episode, { [styles.active]: active })}>
-        {title}
+        <span className={styles.title}>{title}</span>
+        {status !== "published" && (
+          <span className={styles.tag}>Coming Soon</span>
+        )}
       </a>
     </Cmp>
   );
