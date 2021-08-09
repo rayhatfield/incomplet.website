@@ -43,6 +43,14 @@ export default function Episodes({ episodes, active }) {
         onChange={(e) => setMenuOpen(e.target.checked)}
       />
       <ol className={styles.list}>
+        {!active?.id && (
+          <li className={clsx(styles.active, styles.menuTitle)}>
+            <Episode
+              active
+              episode={{ title: "Episodes", status: "published" }}
+            />
+          </li>
+        )}
         {episodes.map((ep) => {
           const isActive = ep.id === active?.id;
           return (
