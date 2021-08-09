@@ -78,7 +78,10 @@ export default function AboutPage({ episodes }) {
             </div>
           </Credit>
           <Credit title="Music">
-            <div>Christina Giacona and Patrick Conlon of Onyx Lane</div>
+            <div>
+              Christina Giacona and Patrick Conlon of{" "}
+              <a href="https://onyxlane.com/">Onyx Lane</a>
+            </div>
           </Credit>
           <Credit title="Our Thanks">
             All episodes from season 1 were produced with the aid of a grant
