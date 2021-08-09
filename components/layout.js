@@ -31,6 +31,7 @@ export function Layout({ children }) {
           <Link href="/about">
             <a>about</a>
           </Link>
+          <a href="mailto:hello@idh.fm">hello@idh.fm</a>
         </nav>
       </header>
       <main className={styles.main}>{children}</main>
