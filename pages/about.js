@@ -65,11 +65,25 @@ export default function AboutPage({ episodes }) {
         </article>
         <article>
           <h2>our team</h2>
-          <p>
-            Thank you to our patrons, as well as our story editor, Spencer Gee
-            and our research assistants, Kayla Sinclair and Shayne Valencia.
-            Consider supporting the show by joining our Patreon.
-          </p>
+          <Credit title="Research Assistants">
+            Kayla Sinclair & Shayne Valencia
+          </Credit>
+          <Credit title="Story Editor">
+            <div>Spencer Gee</div>
+          </Credit>
+          <Credit title="Sound Design/Engineering">
+            <div>
+              By the University of Central Oklahoma’s Center for eLearning and
+              Connected Environments (CeCE)
+            </div>
+          </Credit>
+          <Credit title="Music">
+            <div>Christina Giacona and Patrick Conlon of Onyx Lane</div>
+          </Credit>
+          <Credit title="Our Thanks">
+            All episodes from season 1 were produced with the aid of a grant
+            from the University of Central Oklahoma.
+          </Credit>
         </article>
       </div>
     </div>
@@ -81,4 +95,13 @@ export async function getStaticProps() {
   return {
     props: { episodes },
   };
+}
+
+function Credit({ title, ...other }) {
+  return (
+    <div className={style.credit}>
+      {title && <h3>{title}:</h3>}
+      <div {...other} />
+    </div>
+  );
 }
