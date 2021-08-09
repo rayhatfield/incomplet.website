@@ -37,14 +37,28 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    align-items: flex-end;
+  }
+
+  .header,
   .main {
     padding: 1rem;
   }
+
+  .logo-main {
+    width: 150px;
+  }
+
 }
 
 .footer {
   padding: 1rem 2rem;
   flex: 0 0 0px;
+}
+
+.nav {
+  line-height: 1;
 }
 
 .nav > * {
