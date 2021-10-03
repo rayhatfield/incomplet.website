@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from "next/head";
 import dateFormat from "date-format";
 
 import { getEpisodes, getEpisode } from "../../lib/episodes";
@@ -52,9 +53,24 @@ const Header = ({ episode, episode: { title, status } }) => {
   );
 };
 
-const Ep = ({ episode, episode: { image_url, long_description } }) => {
+// pad season/episode number
+const p = x => `${x}`.padStart(2, '0');
+
+const Ep = ({
+  episode,
+  episode: {
+    season: { number: season },
+    number,
+    title,
+    image_url,
+    long_description
+  }
+}) => {
   return (
     <article className={style.main}>
+      <Head>
+        <title>{title} : incomplet design history : S{p(season)}:E{p(number)}</title>
+      </Head>
       <Header episode={episode} />
       <div dangerouslySetInnerHTML={{ __html: long_description }} />
     </article>
