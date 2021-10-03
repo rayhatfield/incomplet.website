@@ -16,6 +16,11 @@ export function Head() {
         type="text/css"
         href="https://cloud.typography.com/704534/6723032/css/fonts.css"
       />
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@incompletdesign" />
+      <meta name="twitter:title" content="incomplet design history podcast" />
+      <meta name="twitter:description" content="A podcast about women in design history" />
     </H>
   );
 }
