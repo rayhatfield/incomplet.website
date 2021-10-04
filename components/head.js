@@ -20,7 +20,6 @@ export function Head() {
       <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
       <meta name="twitter:site" content="@incompletdesign" />
       <meta name="twitter:title" content="incomplet design history podcast" key="twitter:title" />
-      <meta name="twitter:image" content={image_url} key="twitter:image"/>
       <meta name="twitter:description" content="A podcast exploring the overlooked, underrepresented, or ignored areas of graphic design history, telling those stories, and making graphic design history a little less Incomplete." key="twitter:description" />
     </H>
   );
