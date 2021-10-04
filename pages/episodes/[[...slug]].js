@@ -67,10 +67,12 @@ const Ep = ({
     long_description
   }
 }) => {
+  const seasonEpisode = `S${p(season)}:E${p(number)}`;
   return (
     <article className={style.main}>
       <Head>
-        <title>{title} : incomplet design history : S{p(season)}:E{p(number)}</title>
+        <title>{title} : incomplet design history : {seasonEpisode}</title>
+        <meta name="twitter:title" content={`${title} : incomplet design history : ${seasonEpisode}`} key="twitter:title"/>
         <meta name="twitter:image" content={image_url} key="twitter:image"/>
         {description && <meta name="twitter:description" content={description} key="twitter:description"/>}
       </Head>
