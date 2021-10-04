@@ -1,14 +1,27 @@
-import { Redirect } from "../components/redirect";
-import { getLatestEpisode } from "../lib/episodes";
+import Head from 'next/head';
 
-export default function IndexPage({ episode: { slug } = {} }) {
+import { Redirect } from "../components/redirect";
+import { getLatestEpisode, getPodcastInfo } from "../lib/episodes";
+
+export default function IndexPage({ podcast: {image_url} = {}, episode: { slug } = {} }) {
   const path = slug ? `/episodes/${slug}` : "/about";
-  return <Redirect to={path} />;
+  return (
+    <>
+      <Head>
+        <meta name="twitter:image" content={image_url} key="twitter:image" />
+      </Head>
+      <Redirect to={path} />
+    </>
+  );
 }
 
 export async function getStaticProps() {
-  const episode = await getLatestEpisode();
-  const props = episode ? { episode } : {};
+  const [podcast, episode] = await Promise.all([getPodcastInfo(), getLatestEpisode()]);
+  const props = {
+    podcast,
+    episode
+  }
+
   return {
     props,
   };
