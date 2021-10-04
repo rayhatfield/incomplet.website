@@ -63,6 +63,7 @@ const Ep = ({
     number,
     title,
     image_url,
+    description,
     long_description
   }
 }) => {
@@ -70,6 +71,8 @@ const Ep = ({
     <article className={style.main}>
       <Head>
         <title>{title} : incomplet design history : S{p(season)}:E{p(number)}</title>
+        <meta name="twitter:image" content={image_url} key="twitter:image"/>
+        {description && <meta name="twitter:description" content={description} key="twitter:description"/>}
       </Head>
       <Header episode={episode} />
       <div dangerouslySetInnerHTML={{ __html: long_description }} />

@@ -17,10 +17,10 @@ export function Head() {
         href="https://cloud.typography.com/704534/6723032/css/fonts.css"
       />
 
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
       <meta name="twitter:site" content="@incompletdesign" />
-      <meta name="twitter:title" content="incomplet design history podcast" />
-      <meta name="twitter:description" content="A podcast about women in design history" />
+      <meta name="twitter:title" content="incomplet design history podcast" key="twitter:title" />
+      <meta name="twitter:description" content="A podcast about women in design history" key="twitter:description" />
     </H>
   );
 }
