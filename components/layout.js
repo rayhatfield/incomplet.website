@@ -13,8 +13,8 @@ export function Layout({ children }) {
           {/* <Link href="/">
             <a>incomplet</a>
           </Link> */}
-          <Link href="/">
-            <div>
+          <Link href="/" passHref>
+            <a>
               <img
                 src="/images/logo-w-tag.svg"
                 alt="incomplet: a podcast about design history"
@@ -24,7 +24,7 @@ export function Layout({ children }) {
                 // objectFit="cover"
               />
               <p className={styles.tagline}>a podcast about design history</p>
-            </div>
+            </a>
           </Link>
         </h1>
         <nav className={styles.nav}>

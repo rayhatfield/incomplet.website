@@ -32,7 +32,7 @@ function Episode({
 
 export default function Episodes({ episodes, active }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const closeMenu = useCallback(() => setMenuOpen(false));
+  const closeMenu = useCallback(() => setMenuOpen(false), []);
 
   return (
     <nav className={styles.container}>
