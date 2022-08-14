@@ -1,15 +1,16 @@
 import Image from "next/image";
 
-import { getEpisodes } from "../lib/episodes";
+import { getEpisodes, getSeasons } from "../lib/episodes";
 import EpisodeList from "../components/EpisodeList";
 
 import style from "./about.module.css";
 import epiodesStyle from "./episodes/episodes.module.css";
+import SeasonsNav from "../components/SeasonsNav.jsx";
 
-export default function AboutPage({ episodes }) {
+export default function AboutPage({ episodes, seasons }) {
   return (
     <div className={epiodesStyle.container}>
-      <EpisodeList episodes={episodes} />
+      <SeasonsNav seasons={seasons} />
       <div>
         <article>
           <h2>about the show</h2>
@@ -66,8 +67,11 @@ export default function AboutPage({ episodes }) {
         </article>
         <article>
           <h2>our team</h2>
-          <Credit title="Research Assistants">
+          <Credit title="Research Assistants (Season 1)">
             Kayla Sinclair & Shayne Valencia
+          </Credit>
+          <Credit title="Research Assistants (Season 2)">
+            Ebony Sayles & Dean Kelly
           </Credit>
           <Credit title="Story Editor">
             <div>Spencer Gee</div>
@@ -85,7 +89,7 @@ export default function AboutPage({ episodes }) {
             </div>
           </Credit>
           <Credit title="Our Thanks">
-            All episodes from season 1 were produced with the aid of a grant
+            All episodes from seasons 1 and 2 were produced with the aid of a grant
             from the University of Central Oklahoma.
           </Credit>
         </article>
@@ -95,9 +99,9 @@ export default function AboutPage({ episodes }) {
 }
 
 export async function getStaticProps() {
-  const episodes = await getEpisodes();
+  const [episodes, seasons] = await Promise.all([getEpisodes(), getSeasons()]);
   return {
-    props: { episodes },
+    props: { episodes, seasons },
   };
 }
 

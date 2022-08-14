@@ -1,5 +1,6 @@
 .container {
   position: relative;
+  width: 30ch;
 }
 
 .container input[type=checkbox] {
@@ -24,6 +25,11 @@
   margin-bottom: 0.25rem;
 }
 
+.title {
+  display: inline-block;
+  line-height: 1.1;
+}
+
 .list a, .menuTitle {
   text-decoration: none;
   padding: 0.25em .5em;
@@ -38,14 +44,13 @@
 }
 
 .list a:not(.active) {
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 
 .tag {
   display: block;
   font-size: .5rem;
   text-transform: uppercase;
-  margin-top: -.5em;
 }
 
 @media (min-width: 767px) {

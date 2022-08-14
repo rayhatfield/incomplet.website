@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    font-family: var(--header-font-family);
+    font-size: 0.875rem;
+    color: var(--color-token-bg);
+}
+
+.title {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: .5em;
+}
+
+.item {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item a {
+    text-decoration: none;
+}
+
+.active {
+    background: yellow;
+}

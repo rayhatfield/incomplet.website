@@ -3,7 +3,8 @@ import Head from 'next/head';
 import { Redirect } from "../components/redirect";
 import { getLatestEpisode, getPodcastInfo } from "../lib/episodes";
 
-export default function IndexPage({ podcast: {image_url} = {}, episode: { slug } = {} }) {
+export default function IndexPage({ podcast: {image_url} = {}, episode: { slug, number: episodeNumber, season: { number: season } } = {} }) {
+  // const path = slug ? `/episodes/${season}/${episodeNumber}/${slug}` : "/about";
   const path = slug ? `/episodes/${slug}` : "/about";
   return (
     <>

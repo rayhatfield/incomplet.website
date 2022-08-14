@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Head from "next/head";
-import dateFormat from "date-format";
 
-import { getEpisodes, getEpisode } from "../../lib/episodes";
+import { getEpisodes, getEpisode, getSeasons } from "../../lib/episodes";
 import EpisodeList from "../../components/EpisodeList";
 
 import style from "./episodes.module.css";
+import SeasonsNav from "../../components/SeasonsNav.jsx";
+import {EpisodeHeader} from "../../components/episodes/EpisodeHeader";
 
-const Player = ({ episodeId }) => (
+export const Player = ({ episodeId }) => (
   <iframe
     height="200px"
     width="100%"
@@ -17,41 +18,6 @@ const Player = ({ episodeId }) => (
     src={`https://player.simplecast.com/${episodeId}?dark=false`}
   ></iframe>
 );
-
-const Scheduled = ({ episode: { scheduled_for: date } }) =>
-  !date ? null : (
-    <span>Episode Coming {dateFormat("yyyy-MM-dd", new Date(date))}</span>
-  );
-
-const Published = ({ episode: { id } }) => <Player episodeId={id} />;
-
-const EpisodeTokens = ({ episode }) => {
-  return (
-    <ul className={style.tokens}>
-      {episode?.status === "scheduled" && (
-        <li>
-          <Scheduled episode={episode} />
-        </li>
-      )}
-      {episode?.status === "draft" && (
-        <li>
-          <span>Draft</span>
-        </li>
-      )}
-    </ul>
-  );
-};
-
-const Header = ({ episode, episode: { title, status } }) => {
-  const published = status === "published" || status === "draft"; // showing drafts temporarily
-  return (
-    <header>
-      {published && <Published episode={episode} />}
-      <h1>{title}</h1>
-      <EpisodeTokens episode={episode} />
-    </header>
-  );
-};
 
 // pad season/episode number
 const p = x => `${x}`.padStart(2, '0');
@@ -76,18 +42,27 @@ const Ep = ({
         <meta name="twitter:image" content={image_url} key="twitter:image"/>
         {description && <meta name="twitter:description" content={description} key="twitter:description"/>}
       </Head>
-      <Header episode={episode} />
+      <EpisodeHeader episode={episode} />
       <div dangerouslySetInnerHTML={{ __html: long_description }} />
     </article>
   );
 };
 
-export default function Episode({ episodes, episode }) {
+function episodesForSeason (episodes, seasonNumber) {
+  return episodes.filter(e => e.season?.number === seasonNumber);
+}
+
+export default function Episode({ episodes, episode, seasons }) {
+  const { season: { number: episodeSeasonNumber } = {} } = episode || {};
+  const seasonEpisodes = episodesForSeason(episodes, episodeSeasonNumber);
   return (
-    <section className={style.container}>
-      <EpisodeList episodes={episodes} active={episode} />
-      {episode && <Ep episode={episode} />}
-    </section>
+    <>
+      <section className={style.container}>
+        <SeasonsNav className={style.seasons} seasons={seasons} active={episode?.season?.number} />
+        <EpisodeList episodes={seasonEpisodes} active={episode} />
+        {episode && <Ep episode={episode} />}
+      </section>
+    </>
   );
 }
 
@@ -108,10 +83,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const episodes = await getEpisodes();
+  const [episodes, seasons] = await Promise.all([getEpisodes(), getSeasons()]);
   const episode = slug?.[0] ? await getEpisode(slug[0]) : null;
   return {
     props: {
+      seasons,
       episodes,
       episode,
     },
