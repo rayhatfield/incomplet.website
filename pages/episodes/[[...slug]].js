@@ -57,8 +57,8 @@ export default function Episode({ episodes, episode, seasons }) {
   const seasonEpisodes = episodesForSeason(episodes, episodeSeasonNumber);
   return (
     <>
-      <SeasonsNav seasons={seasons} active={episode?.season?.number} />
       <section className={style.container}>
+        <SeasonsNav className={style.seasons} seasons={seasons} active={episode?.season?.number} />
         <EpisodeList episodes={seasonEpisodes} active={episode} />
         {episode && <Ep episode={episode} />}
       </section>
