@@ -1,0 +1,19 @@
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: .5em;
+}
+
+.item {
+    padding: 0 1em;
+}
+
+.item a {
+    text-decoration: none;
+}
+
+.active {
+    background: yellow;
+}
