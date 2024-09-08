@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import { getEpisodes, getSeasons } from "../lib/episodes";
-import EpisodeList from "../components/EpisodeList";
 
 import style from "./about.module.css";
 import epiodesStyle from "./episodes/episodes.module.css";
@@ -76,14 +75,14 @@ export default function AboutPage({ episodes, seasons }) {
             advertising, and publishing. His work has been recognized by The
             Society of Illustrators New York, The Society of Illustrators of Los
             Angeles, Communication Arts, American Illustration, and CMYK. When
-            he's not drawing pictures or pouring over obscure design documents
-            he teaches full time at the University of Central Oklahoma, where he
-            is an Associate Professor of Design.
+            he&apos;s not drawing pictures or pouring over obscure design
+            documents he teaches full time at the University of Central
+            Oklahoma, where he is an Associate Professor of Design.
           </p>
           <p>
             At the invitation and encouragement of Professor Mandy Horton, Sam
             took over The Incomplet Design History Podcast for Season 4, dubbing
-            the venture "The Illustration Files".
+            the venture &ldquo;The Illustration Files&rdquo;.
           </p>
           <p>
             Sam has no free time but does enjoy the occasional horror movie,
