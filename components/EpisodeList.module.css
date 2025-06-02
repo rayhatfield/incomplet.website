@@ -1,6 +1,7 @@
 .container {
   position: relative;
   width: 30ch;
+  max-width: 390px;
 }
 
 .container input[type=checkbox] {
