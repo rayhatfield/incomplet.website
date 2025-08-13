@@ -66,6 +66,30 @@ export default function AboutPage({ episodes, seasons }) {
           </p>
         </article>
         <article>
+          <h2>guest host (season 5)</h2>
+          <p>
+            Ela Egidy is a typographer, designer, and researcher. She works as a Lecturer
+            in Design at the University of Melbourne, Australia, where she is also a PhD
+            candidate. Her research emphasises critical feminist perspectives to study
+            typography in its varied forms. Her research areas span commodity feminism and
+            the fetishisation of language, design’s relationship to control and dissent, and
+            sixteenth-century bibliography. Her PhD is a historico-theoretical enquiry into
+            the prototypographic practices of nuns working in early modern Italy. Though
+            these areas may seem disparate, they are connected by an unyielding fascination
+            with the materialities of language and their socio-political implications.
+          </p>
+          <p>
+              Ela also works as a publication designer and sometimes exhibition designer under
+              the collaborative guise of eetm.xyz, collaborating with artists and cultural
+              institutions. As guest host for Season 5, she presents the story of the Convertite
+              nuns of Venice, reframing their printing practice as a form of embodied typographic
+              labour. Through a feminist reading, she explores how their work negotiated enclosure,
+              institutional control, and gendered forms of penitent labour. This reading offers a
+              view of typography as a means through which these women remade themselves, inscribing
+              new identities through the physical and devotional act of printing.
+          </p>
+        </article>
+        <article>
           <h2>guest host (season 4)</h2>
           <p>
             Sam Washburn is a certifiable obsessive when it comes to
@@ -95,7 +119,7 @@ export default function AboutPage({ episodes, seasons }) {
             Kayla Sinclair & Shayne Valencia
           </Credit>
           <Credit title="Additional Guest Contributors (Season 1)">
-            Additional guest Contributors: Estee Perkins Fioroni
+            Estee Perkins Fioroni
           </Credit>
           <Credit title="Research Assistants (Season 2)">
             Ebony Sayles & Dean Kelly
@@ -105,6 +129,15 @@ export default function AboutPage({ episodes, seasons }) {
           </Credit>
           <Credit title="Additional Guest Contributors (Season 3)">
             Jacob Larson, Spencer Gee & Esther Velasco
+          </Credit>
+          <Credit title="Research Assistants (Season 4)">
+            Renee Martin & Youser Kassim
+          </Credit>
+          <Credit title="Research Assistants (Season 5)">
+            Drayeson Swanegan, Gabbi Warriner & Michelle Nguyen
+          </Credit>
+          <Credit title="Additional Guest Contributors (Season 5)">
+            Ela Egidy, Dean Kelly & Spencer Gee
           </Credit>
           <Credit title="Story Editor">
             <div>Spencer Gee</div>
@@ -122,7 +155,7 @@ export default function AboutPage({ episodes, seasons }) {
             </div>
           </Credit>
           <Credit title="Our Thanks">
-            All episodes from seasons 1, 2, 3 and 4 were produced with the aid
+            All episodes from seasons 1, 2, 3, 4 and 5 were produced with the aid
             of a grant from the University of Central Oklahoma.
           </Credit>
         </article>
