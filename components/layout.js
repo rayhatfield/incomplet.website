@@ -13,24 +13,17 @@ export function Layout({ children }) {
           {/* <Link href="/">
             <a>incomplet</a>
           </Link> */}
-          <Link href="/" passHref>
-            <a>
-              <img
-                src="/images/logo-w-tag.svg"
-                alt="incomplet: a podcast about design history"
-                className={styles["logo-main"]}
-                // width={336}
-                // height={336}
-                // objectFit="cover"
-              />
-              <p className={styles.tagline}>a podcast about design history</p>
-            </a>
+          <Link href="/">
+            <img
+              src="/images/logo-w-tag.svg"
+              alt="incomplet: a podcast about design history"
+              className={styles["logo-main"]}
+            />
+            <p className={styles.tagline}>a podcast about design history</p>
           </Link>
         </h1>
         <nav className={styles.nav}>
-          <Link href="/about">
-            <a>about</a>
-          </Link>
+          <Link href="/about">about</Link>
           <a href="mailto:hello@idh.fm">hello@idh.fm</a>
         </nav>
       </header>

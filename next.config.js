@@ -1,5 +1,7 @@
 module.exports = {
   images: {
-    domains: ["image.simplecastcdn.com"],
+    remotePatterns: [
+      { protocol: "https", hostname: "image.simplecastcdn.com" },
+    ],
   },
 };

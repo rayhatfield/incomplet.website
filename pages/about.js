@@ -35,7 +35,7 @@ export default function AboutPage({ episodes, seasons }) {
               alt="Photo of Mandy"
               width={336}
               height={336}
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
             />
           </div>
           <p>

@@ -13,7 +13,7 @@ export default function SeasonsNav ({seasons, active, className}) {
             <ul className={style.list}>
                 { seasons.map(s => (
                     <li className={clsx(style.item, { [style.active]: s.number === active})} key={s.number}>
-                        <Link href={`/s/${s.number}`}><a>{s.number}</a></Link>
+                        <Link href={`/s/${s.number}`}>{s.number}</Link>
                     </li>
                 ))}
             </ul>

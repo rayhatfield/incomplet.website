@@ -10,23 +10,25 @@ import styles from "./EpisodeList.module.css";
 
 const MENU = "menu";
 
-function Episode({
-  episode: { title, image_url, slug, status } = {},
-  active,
-  ...other
-}) {
-  const Cmp = active
-    ? (props) => <label htmlFor={MENU} {...props} />
-    : (props) => <Link href={`/episodes/${slug}`} {...props} />;
-  return (
-    <Cmp>
-      <a className={clsx(styles.episode, { [styles.active]: active })}>
-        <span className={styles.title}>{title}</span>
-        {status !== "published" && (
-          <span className={styles.tag}>Coming Soon</span>
-        )}
-      </a>
-    </Cmp>
+function Episode({ episode: { title, slug, status } = {}, active }) {
+  const className = clsx(styles.episode, { [styles.active]: active });
+  const inner = (
+    <>
+      <span className={styles.title}>{title}</span>
+      {status !== "published" && (
+        <span className={styles.tag}>Coming Soon</span>
+      )}
+    </>
+  );
+
+  return active ? (
+    <label htmlFor={MENU} className={className}>
+      {inner}
+    </label>
+  ) : (
+    <Link href={`/episodes/${slug}`} className={className}>
+      {inner}
+    </Link>
   );
 }
 
